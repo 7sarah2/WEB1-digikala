@@ -1,0 +1,273 @@
+.defecto {
+    width: 100%;
+    margin-bottom: 30px;
+    background: #fff;
+}
+
+.defecto-center {
+    max-width: var(--page-max, 1530px);
+    margin: 0 auto;
+    padding: 24px 48px 32px 0;
+    box-sizing: border-box;
+}
+
+/* ---------- ردیف بالا ---------- */
+.defecto-top {
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+    margin-bottom: 23px;
+}
+
+.defecto-title {
+    margin: 0;
+    font-family: var(--font-style);
+    font-size: 22px;
+    font-weight: 700;
+    margin-left: 10px;
+    color: #3f4064;
+    white-space: nowrap;
+}
+
+/* خط بین عنوان و مشاهده همه */
+.defecto-line {
+    flex: 1;
+    height: 1px;
+    background: #e0e0e2;
+}
+
+.defecto-all {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    column-gap: 12px;
+    font-family: var(--font-style);
+    font-size: 14px;
+    font-weight: 500;
+    color: #3f4064;
+    text-decoration: none;
+    white-space: nowrap;
+}
+.defecto-all div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 11px 12px;
+    border-radius: 50%;
+    background: #000;
+    border: 1px solid #e0e0e2;
+}
+.defecto-all div img {
+    width: 16px;
+    height: 16px;
+}
+
+/* ---------- سوییپر ---------- */
+.defecto .swiper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.defecto .swiper-slide {
+    height: auto;
+}
+
+.defecto-card {
+    height: 100%;
+    box-sizing: border-box;
+    width: 210;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    font-family: var(--font-style);
+}
+
+.defecto-img {
+    position: relative;
+}
+.defecto-photo {
+    display: block;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+}
+.defecto-img .heart {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 2;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    padding: 5px;
+    background: #fff;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.defecto-img .heart img {
+    width: 20px;
+    height: 20px;
+}
+
+.defecto-info {
+    flex: 0 0 auto;
+    height: auto;
+    padding: 6px 12px 10px;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+.defecto-name {
+    margin: 0;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    overflow: hidden;
+    font-size: 13px;
+    line-height: 22px;
+    color: #3f4064;
+    text-align: right;
+}
+
+.defecto-price { margin-top: auto; }
+.defecto-price-top {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    column-gap: 5px;
+    margin-bottom: 4px;
+}
+.defecto-price .discount {
+    background: #940000;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: var(--font-number);
+    padding: 2px 8px;
+}
+.defecto-price .old-price {
+    font-size: 12px;
+    color: #81858b;
+    font-family: var(--font-number);
+    text-decoration: line-through;
+}
+.defecto-price .new-price {
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+    color: #3f4064;
+}
+.defecto-price .new-price small {
+    font-size: 11px;
+    font-weight: normal;
+    color: #81858b;
+}
+
+/* دکمه‌های اسلایدر */
+.defecto .swiper-button-next,
+.defecto .swiper-button-prev {
+    z-index: 10;
+    width: 36px;
+    height: 36px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    color: #3f4064;
+}
+.defecto .swiper-button-next::after,
+.defecto .swiper-button-prev::after {
+    font-size: 14px;
+    font-weight: bold;
+}
+.defecto .slide-fin .defecto-card {
+    position: relative;
+    overflow: hidden;
+    background: transparent;
+    min-height: 100%;
+}
+
+/* عکس پس‌زمینه: کل کارت را بگیرد و تار باشد */
+.defecto .slide-fin .defecto-card > img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(4px);
+    transform: scale(1.1);   /* لبه‌های تار شده بیرون بزنند و حاشیه‌ی سفید نیفتد */
+    z-index: 0;
+}
+
+/* لایه‌ی تیره‌ی ملایم برای خوانایی متن */
+.defecto .slide-fin .defecto-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: 1;
+}
+
+/* دکمه روی عکس */
+.defecto .slide-fin .slide-fin-button {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 5px;
+    cursor: pointer;
+}
+
+.defecto .slide-fin .slide-fin-button img {
+    width: 24px;
+    height: 24px;
+    box-sizing: content-box;
+    border-radius: 50%;
+}
+.defecto .slide-fin .slide-fin-button p {
+    margin: 0;
+    font-family: var(--font-style);
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+}
+/* ---------- مستطیل‌های برند ---------- */
+.defecto-more {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+    margin-bottom: 20px;
+}
+
+.defecto-more p {
+    margin: 0;
+    padding: 10px 24px;
+    min-width: 110px;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: var(--font-style);
+    font-size: 14px;
+    font-weight: 700;
+    color: #000;
+    background: #fff;
+    border: 1px solid #e0e0e2;
+    cursor: pointer;
+    transition: background .2s ease, color .2s ease, border-color .2s ease;
+}
+
+.defecto-more p:hover {
+    background: #F2F3F5;
+}
+
+/* اولین مستطیل: مشکی */
+.defecto-more p:first-child {
+    background: #000;
+    color: #fff;
+    border-color: #000;
+}

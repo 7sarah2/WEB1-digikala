@@ -1,0 +1,28 @@
+.s-banner {
+    width: 100%;
+    margin-bottom: 30px;
+}
+.s-banner-center {
+    max-width: var(--page-max, 1520px);
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+.s-banner .swiper {
+    width: 100%;
+    overflow: hidden;
+}
+.s-banner .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 510px;
+    object-fit: cover;
+}
+.s-banner .swiper-pagination-bullet {
+    background: #fff;
+    opacity: 0.8;
+}
+.s-banner .swiper-pagination-bullet-active {
+    background: #fff;
+    opacity: 1;
+
+}

@@ -1,0 +1,286 @@
+.today {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.today-center {
+    max-width: var(--page-max, 1530px);
+    margin: 0 auto;
+    padding: 24px 48px 32px 0;
+    box-sizing: border-box;
+    background: #800000;
+}
+
+.today-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 23px;
+}
+
+.today-top-right {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+}
+.today-top-right p {
+    margin: 0;
+    font-family: var(--font-style);
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+}
+.anim {
+    position: relative;
+    width: 24px;          /* اندازه‌ی کادر را با عکس‌ها تنظیم کن */
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2px;
+}
+
+.anim .today-anim {
+    position: absolute;
+    left: 50%;
+    height: auto;
+    width: auto;
+    max-width: 100%;
+}
+
+/* عکس اول: چسبیده به بالا، ثابت */
+.anim .today-anim:first-child {
+    height: 40px;
+    width: 30px;
+    margin-top: -30px;
+    margin-left: -3px;
+}
+
+/* عکس دوم: پایین، تکان چپ و راست */
+.anim .today-anim:last-child {
+    height: 40px;
+    width: 23px;
+    margin-top: -5px;
+    animation: swing 2.5s ease-in-out infinite;
+}
+
+@keyframes swing {
+    0% {
+        transform: rotate(5deg);
+    }
+    50% {
+        transform: rotate(-5deg);
+    }
+    100% {
+        transform: rotate(5deg);
+    }
+}
+.today-all {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+    padding-left: 10px;
+    font-family: var(--font-style);
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    div{
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        padding: 11px 12px;
+        img{
+        width: 16px;
+        height: 16px;
+    }
+    }
+
+}
+
+.today .swiper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.today .swiper-slide {
+    height: auto;
+}
+
+/* کارت */
+.today-card {
+    height: 100%;
+    box-sizing: border-box;
+    width: 210px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    font-family: var(--font-style);
+}
+
+.today-img {
+    position: relative;
+}
+.today-photo {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+}
+
+/* دایره‌ی قلب بالا-چپ */
+.today-img .heart {
+    position: absolute;
+    margin-left: 10px;
+    margin-top: 10px;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    padding: 5px;
+    background: #fff;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.today-img .heart img {
+    width: 20px;
+    height: 20px;
+}
+
+.today-title {
+    margin: 0;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    overflow: hidden;
+    font-size: 13px;
+    line-height: 22px;
+    color: #3f4064;
+    text-align: right;
+}
+.today-info {
+    flex: 1;     
+    padding: 12px;               /* بقیه‌ی ارتفاع کارت را بگیرد */
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+/* قیمت‌ها */
+.today-price {
+    margin-top: auto;
+}
+.today-price-top {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    column-gap: 5px;   /* تخفیف راست، قیمت قبلی چپ */
+    margin-bottom: 4px;
+}
+.today-price .discount {
+    background: #940000;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: var(--font-number);
+    padding: 2px 8px;
+}
+.today-price .old-price {
+    font-size: 12px;
+    color: #81858b;
+    font-family: var(--font-number);
+    text-decoration: line-through;
+}
+.today-price .new-price {
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+    color: #3f4064;
+}
+.today-price .new-price small {
+    font-size: 11px;
+    font-weight: normal;
+    color: #81858b;
+}
+
+/* دکمه‌های اسلایدر */
+.today .swiper-button-next,
+.today .swiper-button-prev {
+    z-index: 10;
+    width: 36px;
+    height: 36px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    color: #3f4064;
+}
+.today .swiper-button-next::after,
+.today .swiper-button-prev::after {
+    font-size: 14px;
+    font-weight: bold;
+}
+/* اسلاید آخر */
+.today .slide-fin .today-card {
+    position: relative;
+    overflow: hidden;
+    background: transparent;
+    min-height: 100%;
+}
+
+/* عکس پس‌زمینه: کل کارت را بگیرد و تار باشد */
+.today .slide-fin .today-card > img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(4px);
+    transform: scale(1.1);   /* لبه‌های تار شده بیرون بزنند و حاشیه‌ی سفید نیفتد */
+    z-index: 0;
+}
+
+/* لایه‌ی تیره‌ی ملایم برای خوانایی متن */
+.today .slide-fin .today-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: 1;
+}
+
+/* دکمه روی عکس */
+.today .slide-fin .slide-fin-button {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 5px;
+    cursor: pointer;
+}
+
+.today .slide-fin .slide-fin-button img {
+    width: 24px;
+    height: 24px;
+    box-sizing: content-box;
+    border-radius: 50%;
+}
+
+.today .slide-fin .slide-fin-button p {
+    margin: 0;
+    font-family: var(--font-style);
+    font-size: 11px;
+    font-weight: bold;
+    color: #fff;
+}

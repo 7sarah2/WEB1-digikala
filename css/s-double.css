@@ -1,0 +1,26 @@
+.s-double {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.s-double-center {
+    max-width: var(--page-max, 1530px);
+    margin: 0 auto;
+    box-sizing: border-box;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 13px;
+}
+
+.s-double-item {
+    display: block;
+    overflow: hidden;
+}
+
+.s-double-item img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;     /* نسبت دلخواه؛ عکس مربع داری 1 / 1 بگذار */
+    object-fit: cover;
+}

@@ -1,0 +1,173 @@
+.s-footer {
+    width: 100%;
+    background: #fff;
+    font-family: var(--font-style);
+    color: #3f4064;
+}
+
+.s-footer-center {
+    max-width: var(--page-max, 1530px);
+    margin: 0 auto;
+    padding: 0 48px;
+    box-sizing: border-box;
+}
+
+.s-footer p {
+    margin: 0;
+}
+
+/* ---------- بخش ۱: ویژگی‌ها (بلندتر از بقیه) ---------- */
+.s-footer-features {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+    border-top: 1px solid #e0e0e2;
+    border-bottom: 1px solid #e0e0e2;
+}
+
+.s-footer-feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 5px;
+    column-gap: 20px;
+    text-align: center;
+}
+.s-footer-feature img {
+    width: 228px;
+    height: 228px;
+    object-fit: contain;
+}
+.s-footer-feature p {
+    font-size: 15px;
+    padding-bottom: 30px;
+    font-weight: 700;
+}
+
+/* ---------- ردیف‌های مشترک ---------- */
+.s-footer-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* ---------- بخش ۲: لوگو + متن‌ها ---------- */
+.s-footer-brand {
+    min-height: 90px;
+    border-bottom: 1px solid #e0e0e2;
+}
+.s-footer-brand-right img {
+    height: 23px;
+    width: 195px;
+    display: block;
+}
+.s-footer-brand-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 16px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.s-footer-brand-left p {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+}
+
+.s-footer-brand-left span {
+    width: 1px;
+    height: 30px;
+    background: #bfbfc4;
+}
+
+.s-footer-brand-left img {
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    box-sizing: border-box;
+    background: #000;
+    border-radius: 50%;
+}
+.s-footer-divider {
+    width: 1px;
+    height: 16px;
+    background: #bfbfc4;
+}
+
+/* ---------- بخش ۳: متن + عکس‌ها ---------- */
+.s-footer-about {
+    align-items: flex-start;
+    column-gap: 20px;
+    padding: 24px 0;
+    border-bottom: 1px solid #e0e0e2;
+}
+.s-footer-about-right {
+    flex: 1;
+    max-width: 800px;
+}
+.s-footer-about-title {
+    margin: 0 0 10px;
+    font-size: 16px;
+    font-weight: 700;
+}
+.s-footer-about-text {
+    font-size: 13px;
+    line-height: 26px;
+    color: #62666d;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    overflow: hidden;
+}
+.s-footer-about-text.open {
+    -webkit-line-clamp: unset;
+    line-clamp: unset;
+    display: block;
+}
+.s-footer-more-btn {
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: none;
+    background: none;
+    font-family: var(--font-style);
+    font-size: 13px;
+    font-weight: 700;
+    color: #81858b;
+    cursor: pointer;
+    column-gap: 5px;
+}
+.s-footer-more-btn img {
+    width: 14px;
+    height: 14px;
+}
+
+.s-footer-about-left {
+    display: flex;
+    align-items: center;
+    margin-left: 40px;
+    column-gap: 8px;
+}
+.s-footer-about-left img {
+    width: 130px;
+    height: 130px;
+    object-fit: contain;
+    padding: 30px;              /* فاصله‌ی بین بوردر و عکس */
+    margin: 8px;
+    border: 1px solid #bfbfc4;
+}
+
+/* ---------- بخش ۴: کپی‌رایت ---------- */
+.s-footer-copy {
+    min-height: 60px;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #81858b;
+}

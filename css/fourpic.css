@@ -1,0 +1,19 @@
+.fourpic{
+    width: 100%;
+    margin-bottom: 40px;
+    .fourpic-center{
+        max-width: var(--page-max, 1530px);
+    margin: 0 auto;
+    box-sizing: border-box;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 13px;
+    img{
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;     /* نسبت دلخواه؛ عکس مربع داری 1 / 1 بگذار */
+    object-fit: cover;
+    }
+    }
+}

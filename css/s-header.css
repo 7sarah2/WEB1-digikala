@@ -1,0 +1,291 @@
+.s-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    background: #fff;
+    font-family: var(--font-family);
+}
+
+.s-header-center {
+    max-width: var(--page-max, 2400px);
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+/* ---------- بالا ---------- */
+.s-header-center-top {
+    width: 100%;
+}
+.s-header-center-top img {
+    display: block;
+    width: 100%;
+    height: 48px;
+}
+
+/* ---------- وسط ---------- */
+.s-header-center-center {
+    display: flex;
+    transition: height .3s ease, margin-top .3s ease;
+    height: 68px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 48px;
+    padding-left: 53px;
+    padding-bottom: 0;
+    align-items: stretch;
+}
+
+.s-header-center-center-right {
+    display: flex;
+    align-items: center;
+    column-gap: 40px;
+}
+.s-header-center-center-right > img {
+    height: 30px;
+    width: auto;
+}
+.s-header-center-center-right,
+.s-links {
+    align-items: stretch;
+}
+
+
+.s-links {
+    display: flex;
+    column-gap: 16px;
+}
+.s-links p {
+    margin: 0;
+    padding: 12px 0 16px;
+    font-size: 15px;
+    border-bottom: 3px solid transparent;
+    font-family: var(--font-family);
+    color: #3f4064;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.s-header-center-center-left {
+    display: flex;
+    align-items: center;
+    column-gap: 25px;
+}
+.s-header-center-center-left > img {
+    width: 24px;
+    height: 24px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    width: 400px;
+    height: 44px;
+    margin-bottom: 10px;
+    padding: 0 12px;
+    box-sizing: border-box;
+    background: #F2F3F5;
+    border-radius: 24px;
+}
+.search-bar img {
+    width: 18px;
+    height: 18px;
+}
+.search-bar input {
+    flex: 1;
+    min-width: 0;
+    border: none;
+    outline: none;
+    background: none;
+    color: #A2A2A2;
+    font-family: var(--font-family);
+    font-size: 16px;
+    font-weight: 600;
+    }
+
+.sign-up a {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    padding: 8px 14px;
+    border: 1px solid #d2cccc;
+    border-radius: 2px;
+    font-family: var(--font-family);
+    font-size: 14px;
+    font-weight: 500;
+    color: #3f4064;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.sign-up a img {
+    width: 18px;
+    height: 18px;
+    transform:rotate(180deg) ;
+    flex-shrink: 0;
+}
+
+/* خط جداکننده بین ورود و ثبت نام */
+.sign-up a span {
+    display: block;
+    width: 1px;
+    height: 14px;
+    background: #bfbfc4;
+}
+
+.sign-up a:hover {
+    background-color: #F2F3F5;
+}
+
+/* ---------- نوبار ---------- */
+.s-header-center-bottom {
+    position: relative;
+    border-top: 1px solid #e0e0e2;
+    z-index: 2;
+    padding: 8px 48px;
+    background: #fff;
+    max-height: 70px;                 /* ارتفاع واقعی نوبار: 48 + 16 padding + 1 border + کمی اضافه */
+    transition: max-height .3s ease, padding .3s ease, border-width .3s ease;
+}
+
+.s-navbar {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+    height: 48px;
+}
+
+.s-navbar-item {
+    height: auto;
+    display: flex;
+}
+
+.s-navbar-link {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 5px 15px;
+    color: #3f4064;
+    text-decoration: none;
+}
+.s-navbar-item:hover .s-navbar-link {
+    background-color: #F2F3F5;
+}
+
+/* ---------- منوی بازشونده ---------- */
+.s-mega {
+    position: absolute;
+    top: 100%;
+    right: 48px;
+    left: auto;
+    width: 1200px;
+    max-width: calc(100% - 96px);;
+    display: flex;
+    column-gap: 48px;
+    padding: 24px;
+    box-sizing: border-box;
+    background: #fff;
+    border: 1px solid #e0e0e2;
+    z-index: 100;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.25s ease;
+}
+
+.s-navbar-item:hover .s-mega {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.s-mega-group {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    min-width: 120px;
+}
+.s-mega-group a {
+    font-size: 13px;
+    color: #62666d;
+    text-decoration: none;
+}
+.s-mega-group a:hover {
+    color: #1d1d1e;
+}
+.s-mega-group .s-mega-title {
+    font-size: 15px;
+    font-weight: 500;
+    color: #3f4064;
+}
+.s-links p.s-active {
+    font-weight: bold;
+    color: #3f4064;
+    border-bottom-color: #3f4064;
+}
+.s-header-center-bottom.collapsed {
+    max-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-top-width: 0;
+    overflow: hidden;
+}
+.s-icon-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.s-icon-wrap > img {
+    width: 24px;
+    height: 24px;
+}
+
+.s-popup {
+    position: absolute;
+    top: 100%;
+    left: 0;                 /* اگر از لبه‌ی چپ صفحه بیرون زد، right: 0 بگذار */
+    width: 400px;
+    height: 200px;
+    padding: 16px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+    background: #fff;
+    z-index: 200;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all .25s ease;
+}
+
+.s-popup img {
+    width: 120px;
+    height: 120px;
+    margin-top: 10px;
+    object-fit: contain;
+}
+
+.s-popup p {
+    margin: 0;
+    font-family: var(--font-style);
+    font-size: 17px;
+    font-weight: bold;
+    color: #3f4064;
+    text-align: center;
+}
+
+.s-icon-wrap:hover .s-popup {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
